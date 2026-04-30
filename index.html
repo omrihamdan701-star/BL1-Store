@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BL1 Store | FiveM Developer</title>
+    <meta name="description" content="BL1 Store - تصميم سيارات FiveM، خرائط، ملابس وبوتات ديسكورد احترافية">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="logo-loader">
+                <img src="logo.gif" alt="BL1" class="loader-gif" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-fallback">BL1</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+            <span class="loader-text">جاري التحميل...</span>
+        </div>
+    </div>
+
+    <canvas id="particles"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="BL1.png" alt="BL1" class="nav-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="nav-logo-fallback">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">BL1 <span class="highlight">Store</span></span>
+                </span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">من نحن</a></li>
+                <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                <li><a href="#bots" class="nav-link">بوتات ديسكورد</a></li>
+                <li><a href="#freebies" class="nav-link">مجانيات</a></li>
+                <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+            </ul>
+            <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="nav-discord">
+                <i class="fab fa-discord"></i> Discord
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <i class="fas fa-bolt"></i>
+                <span>FiveM Developer</span>
+            </div>
+            <h1 class="hero-title animate-in">
+                <span class="line1">مرحباً بكم في</span>
+                <span class="brand">BL1 <span class="gradient-text">Store</span></span>
+            </h1>
+            <p class="hero-desc animate-in">
+                سيرفر متخصص في تطوير وتصميم محتوى <strong>FiveM</strong> وبوتات <strong>Discord</strong> باحترافية وجودة عالية
+            </p>
+            <div class="hero-buttons animate-in">
+                <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-discord"></i>
+                    انضم للسيرفر
+                    <span class="btn-shine"></span>
+                </a>
+                <a href="#services" class="btn btn-outline">
+                    <i class="fas fa-arrow-down"></i>
+                    اكتشف خدماتنا
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat">
+                    <span class="stat-number" data-target="500">0</span>+
+                    <span class="stat-label">عميل سعيد</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="200">0</span>+
+                    <span class="stat-label">مشروع منجز</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>+
+                    <span class="stat-label">تصميم حصري</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>اسحب للأسفل</span>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">من نحن</span>
+                <h2 class="section-title">لماذا <span class="gradient-text">BL1 Store</span>؟</h2>
+                <p class="section-desc">نحن نقدم أفضل التصاميم والمحتويات للسيرفرات واللاعبين</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-aos>
+                    <div class="card-icon"><i class="fas fa-gem"></i></div>
+                    <h3>جودة عالية</h3>
+                    <p>نقدم تصاميم بجودة احترافية لا مثيل لها مع الاهتمام بكل التفاصيل</p>
+                </div>
+                <div class="about-card" data-aos>
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>سرعة التنفيذ</h3>
+                    <p>نلتزم بتسليم المشاريع في أسرع وقت ممكن مع الحفاظ على الجودة</p>
+                </div>
+                <div class="about-card" data-aos>
+                    <div class="card-icon"><i class="fas fa-headset"></i></div>
+                    <h3>دعم فني</h3>
+                    <p>فريق دعم متخصص جاهز لمساعدتك على مدار الساعة في Discord</p>
+                </div>
+                <div class="about-card" data-aos>
+                    <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>موثوقية</h3>
+                    <p>سمعة ممتازة ومئات العملاء الراضين يثقون في خدماتنا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">خدماتنا</span>
+                <h2 class="section-title">ما الذي <span class="gradient-text">نقدمه</span></h2>
+                <p class="section-desc">مجموعة متكاملة من الخدمات الاحترافية لسيرفرك</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>تصميم سيارات</h3>
+                    <p>تصميم سيارات FiveM احترافية بجودة عالية وتفاصيل دقيقة</p>
+                    <div class="service-glow"></div>
+                </div>
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>تصميم خرائط</h3>
+                    <p>إنشاء خرائط مخصصة ومبتكرة تعطي سيرفرك طابعاً فريداً</p>
+                    <div class="service-glow"></div>
+                </div>
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-shirt"></i>
+                    </div>
+                    <h3>تصميم ملابس</h3>
+                    <p>ملابس مخصصة فريدة ومميزة تضيف لمسة احترافية للاعبين</p>
+                    <div class="service-glow"></div>
+                </div>
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>تصميم مابات</h3>
+                    <p>تصميم مابات احترافية تضيف جمالية وواقعية لسيرفرك</p>
+                    <div class="service-glow"></div>
+                </div>
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-paintbrush"></i>
+                    </div>
+                    <h3>تصميم UI/UX</h3>
+                    <p>واجهات مستخدم احترافية وتصاميم HUD مخصصة لسيرفرك</p>
+                    <div class="service-glow"></div>
+                </div>
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>دعم وتحسين</h3>
+                    <p>نقدم خدمات الدعم الفني وتحسين الأداء لسيرفرك</p>
+                    <div class="service-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bots" class="bots">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">بوتات ديسكورد</span>
+                <h2 class="section-title">بوتات Discord <span class="gradient-text">مخصصة</span></h2>
+                <p class="section-desc">بوتات احترافية مصممة خصيصاً لسيرفرك</p>
+            </div>
+            <div class="bots-grid">
+                <div class="bot-card" data-aos>
+                    <div class="bot-badge">مخصص</div>
+                    <div class="bot-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>بوت إدارة متقدم</h3>
+                    <p>بوت إدارة شامل مع نظام تذاكر، تحذيرات، بان، كيك وأكثر</p>
+                    <ul class="bot-features">
+                        <li><i class="fas fa-check"></i> نظام تذاكر متقدم</li>
+                        <li><i class="fas fa-check"></i> نظام تحذيرات وعقوبات</li>
+                        <li><i class="fas fa-check"></i> أوتو مود ذكي</li>
+                        <li><i class="fas fa-check"></i> لوحة تحكم ويب</li>
+                    </ul>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="bot-btn">
+                        <i class="fab fa-discord"></i>
+                        اطلب الآن
+                    </a>
+                </div>
+                <div class="bot-card featured" data-aos>
+                    <div class="bot-badge">الأكثر طلباً</div>
+                    <div class="bot-icon">
+                        <i class="fas fa-ticket"></i>
+                    </div>
+                    <h3>بوت تذاكر احترافي</h3>
+                    <p>نظام تذاكر متكامل مع فئات مخصصة ونقل وتقييم</p>
+                    <ul class="bot-features">
+                        <li><i class="fas fa-check"></i> فئات تذاكر متعددة</li>
+                        <li><i class="fas fa-check"></i> نظام نقل وإغلاق</li>
+                        <li><i class="fas fa-check"></i> تقييم بعد الإغلاق</li>
+                        <li><i class="fas fa-check"></i> إحصائيات مفصلة</li>
+                    </ul>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="bot-btn">
+                        <i class="fab fa-discord"></i>
+                        اطلب الآن
+                    </a>
+                </div>
+                <div class="bot-card" data-aos>
+                    <div class="bot-badge">مخصص</div>
+                    <div class="bot-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>بوت إحصائيات</h3>
+                    <p>بوت إحصائيات متقدم مع رسوم بيانية وتقارير يومية</p>
+                    <ul class="bot-features">
+                        <li><i class="fas fa-check"></i> إحصائيات الأعضاء</li>
+                        <li><i class="fas fa-check"></i> رسوم بيانية تفاعلية</li>
+                        <li><i class="fas fa-check"></i> تقارير يومية وأسبوعية</li>
+                        <li><i class="fas fa-check"></i> تتبع النشاط</li>
+                    </ul>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="bot-btn">
+                        <i class="fab fa-discord"></i>
+                        اطلب الآن
+                    </a>
+                </div>
+                <div class="bot-card" data-aos>
+                    <div class="bot-badge">مخصص</div>
+                    <div class="bot-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>بوت ربط FiveM</h3>
+                    <p>ربط سيرفر FiveM مع Discord مع مزامنة الرتب والبيانات</p>
+                    <ul class="bot-features">
+                        <li><i class="fas fa-check"></i> ربط حسابات تلقائي</li>
+                        <li><i class="fas fa-check"></i> مزامنة الرتب</li>
+                        <li><i class="fas fa-check"></i> إشعارات السيرفر</li>
+                        <li><i class="fas fa-check"></i> عرض اللاعبين أونلاين</li>
+                    </ul>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="bot-btn">
+                        <i class="fab fa-discord"></i>
+                        اطلب الآن
+                    </a>
+                </div>
+                <div class="bot-card" data-aos>
+                    <div class="bot-badge">مخصص</div>
+                    <div class="bot-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>بوت نظام اقتصادي</h3>
+                    <p>نظام اقتصادي متكامل مع متجر وصيدلية ومهام يومية</p>
+                    <ul class="bot-features">
+                        <li><i class="fas fa-check"></i> نظام عملات متكامل</li>
+                        <li><i class="fas fa-check"></i> متجر تلقائي</li>
+                        <li><i class="fas fa-check"></i> مهام وجوائز يومية</li>
+                        <li><i class="fas fa-check"></i> نظام مستويات</li>
+                    </ul>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="bot-btn">
+                        <i class="fab fa-discord"></i>
+                        اطلب الآن
+                    </a>
+                </div>
+                <div class="bot-card custom-bot" data-aos>
+                    <div class="bot-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3>بوت مخصص</h3>
+                    <p>عندك فكرة بوت معينة؟ صمم لك بوت على طلبك بالضبط!</p>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="bot-btn">
+                        <i class="fab fa-discord"></i>
+                        تواصل معنا
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="freebies" class="freebies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">مجانيات</span>
+                <h2 class="section-title">هدايا <span class="gradient-text">مجانية</span></h2>
+                <p class="section-desc">نقدم محتوى مجاني مميز لمجتمعنا</p>
+            </div>
+            <div class="freebies-grid">
+                <div class="freebie-card" data-aos>
+                    <div class="freebie-badge">مجاني</div>
+                    <div class="freebie-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3>سيارات مجانية</h3>
+                    <p>سيارات FiveM مجانية بجودة عالية جاهزة للتحميل والاستخدام</p>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="freebie-btn">
+                        <i class="fab fa-discord"></i>
+                        احصل عليها الآن
+                    </a>
+                </div>
+                <div class="freebie-card featured" data-aos>
+                    <div class="freebie-badge">مجاني</div>
+                    <div class="freebie-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>مابات مجانية</h3>
+                    <p>مابات احترافية مجانية تضيف لمسة جمالية لسيرفرك</p>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="freebie-btn">
+                        <i class="fab fa-discord"></i>
+                        احصل عليها الآن
+                    </a>
+                </div>
+                <div class="freebie-card" data-aos>
+                    <div class="freebie-badge">مجاني</div>
+                    <div class="freebie-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>بوتات مجانية</h3>
+                    <p>بوتات Discord أساسية مجانية جاهزة للاستخدام الفوري</p>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="freebie-btn">
+                        <i class="fab fa-discord"></i>
+                        احصل عليها الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-diamond"></i>
+                </div>
+                <h2>إذا كنت تبحث عن محتوى مميز لسيرفرك</h2>
+                <p>BL1 Store هو المكان المناسب لك. انضم إلينا الآن وابدأ رحلتك نحو الاحتراف!</p>
+                <div class="cta-buttons">
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fab fa-discord"></i>
+                        انضم الآن
+                    </a>
+                    <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="btn btn-outline btn-lg">
+                        <i class="fas fa-gift"></i>
+                        المجانيات
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">تواصل معنا</span>
+                <h2 class="section-title">انضم إلى <span class="gradient-text">مجتمعنا</span></h2>
+                <p class="section-desc">كن جزءاً من عائلتنا واحصل على أفضل المحتويات</p>
+            </div>
+            <div class="contact-cards">
+                <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="contact-card" data-aos>
+                    <div class="contact-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Discord الرئيسي</h3>
+                    <p>الرابط الدائم - انضم للسيرفر وتواصل معنا</p>
+                    <span class="contact-link">discord.gg/myDPRtTV2k</span>
+                </a>
+                <a href="https://discord.gg/myDPRtTV2k" target="_blank" class="contact-card" data-aos>
+                    <div class="contact-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>رابط مختصر</h3>
+                    <p>رابط بديل سريع للانضمام</p>
+                    <span class="contact-link">discord.gg/bbl1</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="BL1.png" alt="BL1" class="footer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="footer-logo-fallback">
+                            <span class="logo-text">BL1 <span class="highlight">Store</span></span>
+                        </span>
+                    </div>
+                    <p>Your Dream, Our Design</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#bots">بوتات ديسكورد</a></li>
+                        <li><a href="#freebies">مجانيات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="https://discord.gg/myDPRtTV2k" target="_blank"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 BL1 Store. جميع الحقوق محفوظة.</p>
+                <p class="footer-tagline">Your Dream, Our Design</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
